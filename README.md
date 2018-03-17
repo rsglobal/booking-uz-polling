@@ -29,3 +29,28 @@ const stopPolling = startPolling({
 
 // run `stopPolling()` to stop polling;
 ```
+
+## Telegram notifications
+
+1.  Register in [telegram](https://web.telegram.org/#/login)
+2.  Create new bot using [@BotFather](https://t.me/BotFather) command `/newbot` and get `<token>`
+3.  Write random text to your bot and extract `<chat_id>` from `https://api.telegram.org/bot<token>/getUpdates` response:
+    `<chat_id>` = `response->message->chat->id`
+4.  Use `onResultChanged` function to notify via telegram:
+
+```js
+const script = document.createElement("script");
+
+script.type = "module";
+script.textContent = `
+  import {startPolling} from 'https://rawgit.com/bodia-uz/booking-uz-polling/master/index.js'
+  
+  startPolling({
+    onResultChanged(results) {
+      fetch('https://api.telegram.org/bot<token>/sendMessage?chat_id=<chat_id>&text=' + encodeURIComponent(results))
+    }
+  });
+`;
+
+document.body.appendChild(script);
+```
