@@ -1,0 +1,16 @@
+{
+  "name": "booking-uz-polling",
+  "version": "1.0.0",
+  "repository": "https://github.com/bodia-uz/booking-uz-polling",
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,md}": ["prettier --write", "git add"]
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.0",
+    "prettier": "1.11.1"
+  }
+}
