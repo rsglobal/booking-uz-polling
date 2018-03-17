@@ -32,6 +32,10 @@ const stopPolling = startPolling({
 
 ## Telegram notifications
 
+Add chat with [@TrainKetsBot](https://t.me/TrainKetsBot) and follow instructions.
+
+Or create your own bot:
+
 1.  Register in [telegram](https://web.telegram.org/#/login)
 2.  Create new bot using [@BotFather](https://t.me/BotFather) command `/newbot` and get `<token>`
 3.  Write random text to your bot and extract `<chat_id>` from `https://api.telegram.org/bot<token>/getUpdates` response:
