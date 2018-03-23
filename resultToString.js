@@ -18,7 +18,7 @@ function resultToString(result) {
   return data.list
     .filter(train => train.types.length > 0)
     .map(train => trainToString(train))
-    .join("; ") || "☹️No places in this direction.";
+    .join("; ") || '☹️No places in this direction.';
 }
 
 export default resultToString;
