@@ -15,10 +15,12 @@ function resultToString(result) {
     return data.warning || JSON.stringify(data);
   }
 
-  return data.list
-    .filter(train => train.types.length > 0)
-    .map(train => trainToString(train))
-    .join("; ") || '☹️No places in this direction.';
+  return (
+    data.list
+      .filter(train => train.types.length > 0)
+      .map(train => trainToString(train))
+      .join("; ") || "☹️ NO PLACES"
+  );
 }
 
 export default resultToString;
