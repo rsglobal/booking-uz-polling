@@ -2,7 +2,7 @@ import { subscribe, submit } from "./search-api.js";
 import notify from "./notify.js";
 import _resultToString from "./resultToString.js";
 
-const DEFAULT_POLLING_INTERVAL = 1 * 60 * 1000;
+const DEFAULT_POLLING_INTERVAL = 1 * 20 * 1000;
 
 function startPolling({
   pollingIntervalMs = DEFAULT_POLLING_INTERVAL,
