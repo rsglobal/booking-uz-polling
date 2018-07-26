@@ -7,6 +7,8 @@ function trainToString(train) {
 function resultToString(result) {
   const data = result.data;
 
+  console.log(result);
+  
   if (!data) {
     return JSON.stringify(result);
   }
