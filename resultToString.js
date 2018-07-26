@@ -1,5 +1,5 @@
 function trainToString(train) {
-  return `🚂${train.num}:${train.types
+  return `🚂${train.from.date}:${train.num}:${train.types
     .map(t => t.letter + t.places)
     .join(",")}`;
 }
@@ -7,8 +7,6 @@ function trainToString(train) {
 function resultToString(result) {
   const data = result.data;
 
-  console.log(result);
-  
   if (!data) {
     return JSON.stringify(result);
   }
